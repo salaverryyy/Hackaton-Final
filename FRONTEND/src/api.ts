@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; // Corrige la importación de jwt-decode
 
-const API_URL = 'http://54.146.73.88:8080';
+const API_URL = 'http://localhost:8080';
 
 // Interfaces
 export interface User {
