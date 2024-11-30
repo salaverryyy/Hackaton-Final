@@ -9,6 +9,7 @@ import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,10 @@ public class Chat {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String chatName;
+
+    private LocalDate dateCreation;
 
     // Usuario organizador del evento
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
