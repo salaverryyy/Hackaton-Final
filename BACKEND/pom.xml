@@ -54,6 +54,11 @@
 			<version>3.0.2</version>
 		</dependency>
 		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-ai-inference</artifactId>
+			<version>1.0.0-beta.2</version>
+		</dependency>
+		<dependency>
 			<groupId>com.auth0</groupId>
 			<artifactId>java-jwt</artifactId>
 			<version>4.4.0</version>
