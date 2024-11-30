@@ -1,0 +1,108 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuente personalizada y color base */
+body {
+  background-color: #f7fafc; /* bg-gray-100 */
+  color: #2d3748; /* text-gray-800 */
+  font-family: 'Poppins', sans-serif; /* font-sans */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fondo de página con degradado */
+.bg-gradient {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* Sombras y bordes suaves */
+.shadow-xl-custom {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rounded-xl-custom {
+  border-radius: 1rem;
+}
+
+/* Animaciones */
+.transition-all-custom {
+  transition: all 0.3s ease;
+}
+
+/* Botón con degradado */
+.btn-gradient {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+/* Botones con efecto de hover */
+.button-primary {
+    background: linear-gradient(to right, #f56565, #ed8936);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button-primary:hover {
+      background-image: linear-gradient(to right, #f56565, #ed8936);
+      transform: scale(1.05);
+    }
+    
+    .button-secondary {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .button-secondary:hover {
+      background-color: #1e40af;
+      transform: scale(1.05);
+    }
+  
+/* Barra de búsqueda */
+.search-bar {
+    @apply bg-gray-100 rounded-full px-4 py-2 shadow-md focus:outline-none;
+  }
+  
+  /* Lista de amigos */
+  .friend-list {
+    @apply bg-white p-4 rounded-lg shadow-md;
+  }
+  
+  .friend-item {
+    @apply py-2 px-3 rounded-lg text-gray-800 transition-colors duration-200 ease-in-out;
+  }
+  
+  .friend-item:hover {
+    @apply bg-gray-100;
+  }
+
+  
+
+  
