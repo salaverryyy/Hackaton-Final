@@ -1,7 +1,9 @@
 package com.eventos.recuerdos.eventify_project.user.domain;
 
+import com.eventos.recuerdos.eventify_project.chat.domain.Chat;
 import com.eventos.recuerdos.eventify_project.invitation.domain.Invitation;
 import com.eventos.recuerdos.eventify_project.memory.domain.Memory;
+import com.eventos.recuerdos.eventify_project.message.domain.Message;
 import com.eventos.recuerdos.eventify_project.notification.domain.Notification;
 import com.eventos.recuerdos.eventify_project.publication.domain.Publication;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -69,6 +71,11 @@ public class UserAccount implements UserDetails {
     @JsonIgnore
     private List<Memory> memories = new ArrayList<>();
 
+    @OneToMany(mappedBy = "chatOwner", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
+    private List<Chat> chats = new ArrayList<>();
+
+
     @OneToMany(mappedBy = "usuarioInvitador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Invitation> invitationsSent = new ArrayList<>();
@@ -89,6 +96,10 @@ public class UserAccount implements UserDetails {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JsonIgnore
     private List<Publication> publications = new ArrayList<>();
+
+    @OneToMany(mappedBy = "messageOwner", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
+    private List<Message> messages = new ArrayList<>();
 
     // Métodos de UserDetails
     @Override
